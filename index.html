@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Me, Myself and I </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/ffe09cfda8.js" crossorigin="anonymous"></script>
+<style>
+/*PopUP*/
+.popup{
+		position:absolute;
+		top:110%;
+		left:32%;
+		font-size:18px;
+		font-family:Copperplate, fantasy;
+		color:	#F5F5DC;
+		border-radius:5px;
+		background-color: martinique;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	  }
+.popup .popuptext {
+					visibility: hidden;
+					width: 255px;
+					height: 50px;
+					background-color: cyan;
+					color: black;
+					text-align: center;
+					border-radius: 6px;
+					padding: 10px 0;
+					position: absolute;
+					z-index: 1;
+					bottom: 125%;
+					left: 50%;
+					margin-left: -80px;
+                  }
+.popup .popuptext::after {
+							content: "";
+							position: absolute;
+							top: 100%;
+							left: 50%;
+							margin-left: -5px;
+							border-width: 5px;
+							border-style: solid;
+							border-color: #555 transparent transparent transparent;
+						 }
+.popup .show {
+				visibility: visible;
+				-webkit-animation: fadeIn 1s;
+  				animation: fadeIn 1s;
+             }
+@-webkit-keyframes fadeIn {
+							from {opacity: 0;} 
+							to {opacity: 1;}
+                          }	
+@keyframes fadeIn {
+					from {opacity: 0;}
+					to {opacity:1 ;}
+                  }					  
+			 
+/*IMAGES*/
+.img1{
+		float: left;
+		left:5px;
+     }
+.img2{
+		float: right;
+      }
+.img3{	
+		float:center;
+		border-radius:50%;
+     }
+.img4 { float: left;
+		border-radius:50%;
+	  }
+	  
+.img5 { float: right;
+		border-radius:50%;
+	  }
+.img6 { float: center;
+		border-radius:50%;	
+       }		
+/*TEXT*/
+h1{
+	color: beige;
+	font-size:350%;
+	font-style:italic;
+	font-family:Copperplate, fantasy;
+	text-align: center;
+	text-shadow:5px 5px 10px magenta;
+	text-decoration:underline;
+	position:relative;
+  }
+  
+ h2{
+	color: black;
+	font-style:italic;
+	font-family:Copperplate, fantasy;
+	text-align: center;
+  }
+h3{
+	color: orange;
+	font-size:180%;
+	font-style:italic;
+	font-family:Copperplate, fantasy;
+	text-align: center;
+  }
+h4{
+	color: black;
+	font-size:150%;
+	font-style:italic;
+	font-family:Copperplate, fantasy;
+	text-align: center;
+  }
+  
+.p1 {
+		font-family:"Lucida Console", "Courier New", monospace;
+	}
+.p2 { text-align:center;
+	  font-family:"Lucida Console", "Courier New", monospace;
+	}
+.p3 {
+	font-size:110%;
+	color: orange;
+	text-align:center;
+}
+.p4 {
+	font-size:110%;
+	color: beige;
+	text-align:center;
+}
+	
+/*DIVS*/
+div.relative {
+				position:relative;
+				left: 210px;
+				top: 110px;
+				background-color: cyan;
+				width: 600px;
+				height: 200px;
+				border: 5px outset cyan;
+				border-radius:20px;
+				text-align:left;
+			}
+div.absolute{
+				position:absolute;
+				top: 15px;
+				left: 15px;
+				width: 200px;
+				height: 170px;
+				background-color: lavender;
+				border: 3px outset cyan;
+				text-align:center;
+				border-radius:100px;
+            }
+		
+.div1 {
+		position:absolute;
+		top:350px;
+		left:15px;
+		width: 530px;
+		height: 960px;
+		background-image:url(bg.jpg);
+		border: 3px outset cyan;
+		text-align:center;
+		border-radius:25px;
+		padding-right: 15px;
+		padding-left: 15px;
+            }
+.div2 {
+		position:absolute;
+		text-align:center;
+		top:350px;
+		left:630px;
+		border: 3px outset cyan;
+		background-image:url(bg2.jpg);
+		background-size:cover;
+		border-radius:25px;
+		width:550px;
+		height: 770px;
+		padding-right: 15px;
+		padding-left: 15px;
+		}
+.div3 {
+		position:absolute;
+		text-align:center;
+		top:1150px;
+		left:630px;
+		border: 3px outset cyan;
+		background-color: lavender;
+		border-radius:50%;
+		width:520px;
+		height: 400px;
+		padding-top: 50px;
+		padding-right: 15px;
+		padding-left: 15px;
+		background-image:url(it.jpg);
+		}
+.div4 {
+		position:absolute;
+		top:-20px;
+		left:200px;
+		width: 600px;
+		height: 100px;
+            }
+.div5 {
+		position:absolute;
+		text-align:center;
+		top:1150px;
+		left:1250px;
+		border: 3px outset cyan;
+		background-color: lavender;
+		border-radius:50%;
+		width:520px;
+		height: 400px;
+		padding-top: 50px;
+		padding-right: 15px;
+		padding-left: 15px;
+		background-image:url(it.jpg);
+		}
+.div6 {
+		position:absolute;
+		text-align:center;
+		top:350px;
+		left:1308px;
+		border: 3px outset cyan;
+		background-image:url(bg2.1.jpg);
+		background-size:cover;
+		border-radius:25px;
+		width:550px;
+		height: 770px;
+		padding-right: 15px;
+		padding-left: 15px;
+		}
+.div7 { 
+		position:absolute;
+		top:550px;
+		left:1214px;
+		border: 3px outset cyan;
+		background-color: cyan;
+		width: 100px;
+		height:30px;
+	  }
+.div8 { 
+		position:absolute;
+		top:950px;
+		left:1214px;
+		border: 3px outset cyan;
+		background-color: cyan;
+		width: 100px;
+		height:30px;
+	  }
+.div9 {
+		position:absolute;
+		top:75px;
+		left:850px;
+		width: 550px;
+		height: 250px;
+		background-image:url(bg3.jpg);
+		border: 3px outset cyan;
+		text-align:center;
+		border-radius:25px;
+		padding-right: 15px;
+		padding-left: 15px;
+            }
+.div10 {
+		position:absolute;
+		top:1630px;
+		left:850px;
+		width: 600px;
+		height: 250px;
+		background-image:url(tiz.jpg);
+		border: 3px outset cyan;
+		text-align:center;
+		border-radius:25px;
+		padding-right: 15px;
+		padding-left: 15px;
+            }
+.div11 {
+		position:absolute;
+		top:1680px;
+		left:15px;
+		width: 300px;
+		height: 200px;
+		text-align:center;
+		background-color:CornflowerBlue;
+		border: 3px outset cyan;
+		border-radius:100%;
+            }
+			
+/*BODY*/			
+body {
+		background-image:url(space.gif);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-attachment:fixed;
+		background-size: cover;
+	}
+
+</style>
+</head>
+<body>
+
+<!--IMAGES-->
+<img class="img1" src="hello.gif" style="width:250px;height:250px;">
+
+<!--HEADINGS-->
+<div class="div4">
+<h1>Who Am I?</h1>
+<div class="popup"  onclick="myFunction()">Click to translate
+		<span class="popuptext" id="myPopup">Sino Ba Naman Ako.....</span>
+		</div>
+<script>
+function myFunction() {
+						var popup = document.getElementById("myPopup");
+						popup.classList.toggle("show");
+                      }
+</script>
+</div>
+
+<!--INFORMATION-->
+<div class="relative">
+<h2><i class="fas fa-address-book"></i>   My Information   <i class="fas fa-address-card"></i></h2>
+<p class="p1">NAME: John Steven M. Jaime<br>
+   AGE: 19 years old<br>
+   SCHOOL: Pamantasan ng Lungsod ng Pasig<br>
+   COURSE: Bachelor Of Science in Information Technology
+   </p>
+	<div class="absolute"><img class="img3" src="me.jpg" width="195" height="170"> </div>
+	</div></div>
+	
+<!--BODY-->
+<div class="div1"> 
+<h3><i class="fas fa-chess"></i>- HOBBIES -<i class="fas fa-chess"></i></h3>
+<img class="img4" src="gaming.gif" style="width:200px;height:200px;"> <p class="p3"><br><br>I like to play games like computer and mobile games but not feelings.. Just kidding. <br>I am a Self-Proclaimed Gamer.</p>
+<img class="img5" src="bball.gif" style="width:200px;height:200px;"> <p class="p3"><br><br><br><br><br>I like to play basketball even though I'm not really a good player. <br> </p>
+<img class="img4" src="gym.gif" style="width:200px;height:200px;"> <p class="p3"><br><br><br> Recently, I made a new hobby and it is working out in our local gym.<br>I often do this 2 - 3 times a week  </p>
+<img class="img5" src="wat.gif" style="width:200px;height:200px;"> <p class="p3"><br><br><br><br><br>I like to watch videos regarding about crafting, sculpting and creating artworks. <br> I don't know why but I find it interesting and Amusing. </p>
+<img class="img4" src="waste.gif" style="width:200px;height:200px;"> <p class="p3"><br><br><br><br>Most of all, this is my favorite hobby among the others.<br>And it is wasting my own time... <br> </p>
+</div>
+
+<div class="div2">
+<h3><i class="fas fa-user-cog"></i>-SKILLS AND TALENTS-<i class="fas fa-user-edit"></i></h3>
+<img class="img4" src="learner.gif" style="width:200px;height:200px;">
+<p class="p3"> <br><br>I am a Fast learner<br> And I can easily learn things <br> while I'am Doing it in Actual<br></p><br><br><br><br><br>
+<img class="img4" src="jack.gif" style="width:200px;height:200px;">
+<p class="p3"><br>  You know the saying "Jack of all trades,Master of None"?<br> I thinks it's Me <br> Because through out of my life<br>I enhance my self in many things <br>but I'm sure there's a lot room for improvement.</p><br><br><br>
+<img class="img4" src="non.gif" style="width:200px;height:200px;">
+<p class="p3"><br><br><br>I can express myself or thoughts<br> well in non-verbal or in written <br> than in verbal form</p>
+</div>
+
+<div class="div7"></div>
+<div class="div8"></div>
+
+<div class="div6">
+<h3><i class="fas fa-user-cog"></i>-SKILLS AND TALENTS-<i class="fas fa-user-edit"></i></h3>
+<img class="img4" src="draw.gif" style="width:200px;height:200px;">
+<p class="p3"> <br><br><br>I can draw<br> But I can say I'm an average <br><br></p><br><br><br><br>
+<img class="img4" src="brainstorm.gif" style="width:200px;height:200px;">
+<p class="p3"><br><br>  I am good in Brainstorming,<br> Of course <br> when I'm in the mood<br><br> <br></p><br><br>
+<img class="img4" src="adapt.gif" style="width:200px;height:200px;">
+<p class="p3"><br><br><br>I can somehow<br> easily to adapt to certain situations <br> </p>
+</div>
+
+
+
+<div class="div3">
+<h3><i class="fas fa-user-graduate"></i>-Strength in terms of IT field-<i class="fas fa-user-graduate"></i></h3>
+<img class="img4" src="computer.gif" style="width:200px;height:200px;">
+<p class="p3"><br><br>-I know how a computer runs<br>
+              -I have some basic Information about certain Hardware and Software of a Computer<br>
+			  -I know how to do some basic-Troubleshooting<br>
+			  -I can easily learn things when I'm doing the actual work.
+</div>
+
+<div class="div5">
+<h3><i class="fas fa-user-graduate"></i>-Weakness in terms of IT field-<i class="fas fa-user-graduate"></i></h3>
+<img class="img4" src="computer.gif" style="width:200px;height:200px;">
+<p class="p3"><br><br>-I Can easily Forget codes so I need a copy when I'm doing one<br>
+              -Sometimes it took me long time to figure some problem in a PC<br>
+			  -I don't know some shorcuts and command in certain softwares of the computer and in the computer itself<br>
+</div>
+
+<div class="div9">
+<h3><i class="fas fa-user-friends"></i></i>Family<i class="fas fa-user-friends"></i></h3>
+<p class="p3"><br>My mother's Name is Renalyn<br>
+My Father's Name is Sherwin <br><br> I have two younger siblings which made me the eldest among them
+</div>
+
+<div class="div10">
+<h3><i class="fas fa-user-astronaut"></i>-Career or Job position do you see yourself after your graduation-<i class="fas fa-user-astronaut"></i></h3>
+<p class="p3"> <br>I honestly I don't really know what will be my future, There's a lot of options and scenarios <br>but I know the future is bright <br>
+so I just need to do which is which and what is what...
+</div>
+
+<div class="div11">
+<h4>Links and Referrence</h4>
+<p class="p4"><a href="https://www.w3schools.com/"> For styling and creating my website</a> <br><a href="https://www.google.com/"> For Images and other stuffs</a>
+<br><a href= "https://fontawesome.com/"> For Icons that I used </p>
+</div>
+</body>
+</html>
+
+
